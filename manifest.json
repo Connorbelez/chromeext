@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Nunya",
+  "version": "1.0",
+  "description": "Hides specific HTML elements on a webpage",
+  "permissions": ["activeTab", "https://app.dataannotation.tech/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.dataannotation.tech/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
